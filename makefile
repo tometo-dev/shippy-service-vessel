@@ -1,5 +1,5 @@
 build:
-    protoc -I. --go_out=plugins=micro:. proto/vessel/vessel.proto
+    protoc --proto_path=. --go_out=. --micro_out=. proto/vessel/vessel.proto
     docker build -t shippy-service-vessel
 
 run:
